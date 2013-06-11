@@ -24,14 +24,16 @@ using std::cout;
 using std::vector;
 using std::endl;
 
-void print(vector<int> l) {
+template<typename T>
+void print(vector<T> l) {
     for (int i=0; i<l.size(); i++) {
         cout << l[i] << " ";
     }
     cout << endl;
 }
 
-void insertion_sort(vector<int>& l) {
+template<typename T>
+void insertion_sort(vector<T>& l) {
     //pass by reference is crucial
     int size = l.size();
     for (int i = 1; i < size; i++) {
@@ -40,7 +42,7 @@ void insertion_sort(vector<int>& l) {
             if (l[j] < l[j-1]) {
                 // if elements are out of order,
                 // swap them using a temporary variable
-                int temp = l[j-1];
+                T temp = l[j-1];
                 l[j-1] = l[j];
                 l[j] = temp;
             } else {
@@ -53,7 +55,7 @@ void insertion_sort(vector<int>& l) {
 
 int main() {
     // Testing
-    vector<int> l = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
+    vector<int> l = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     cout << "Unsorted list: ";
     print(l);
     insertion_sort(l);

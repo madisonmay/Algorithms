@@ -11,16 +11,16 @@
 Array.prototype.bubble_sort = function() {
     // basic optimization to avoid unneeded checks
     // note that bubble_sort is the generic bad sorting algorithm
-    var size = this.length
+    var size = this.length;
     var sorted_list = false;
-    var j = 0
+    var j = 0;
     while (!sorted_list) {
         var modified = false;
         for (var i = 0; i < (size - j); i++) {
-            if (l[i-1] > l[i]) {
-                var temp = l[i-1];
-                l[i-1] = l[i];
-                l[i] = temp;
+            if (this[i-1] > this[i]) {
+                var temp = this[i-1];
+                this[i-1] = this[i];
+                this[i] = temp;
                 modified = true;
             }
         }
