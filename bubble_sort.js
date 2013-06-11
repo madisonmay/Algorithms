@@ -1,12 +1,18 @@
-// Bubble Sort:
-// stable
-// in-place
+// 
+// Bubble Sort
+// -----------
+// Advantages:
+//     - stable
+//     - in-place
+// Disadvantages:
+//     - slow for large data sets
 // Time Complexity:
-//     - worst: O(n^2)
+//     - worst:   O(n^2)
 //     - average: O(n^2)
-//     - best: O(n)
+//     - best:    O(n)
 // Space Complexity:
 //     - O(1)
+// 
 
 Array.prototype.bubble_sort = function() {
     // basic optimization to avoid unneeded checks

@@ -1,7 +1,6 @@
 /*
-Sorts list l using insertion sort.
-Requires that elements in list can be compared
-using the < operator.
+Insertion Sort
+--------------
 Advantages:
     - simple implementation
     - efficient for small data sets
@@ -12,11 +11,11 @@ Advantages:
 Disadvantages:
     - quadratic time complexity
 Time Complexity:
-    best: O(n)
-    average: O(n^2)
-    worst: O(n^2)
+    - worst:   O(n^2)
+    - average: O(n^2)
+    - best:    O(n)
 Space Complexity:
-    O(n)
+    - O(n)
 */
 
 Array.prototype.insertion_sort = function() {

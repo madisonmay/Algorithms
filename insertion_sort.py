@@ -1,7 +1,7 @@
 def insertion_sort(l):
-    """Sorts list l using insertion sort.
-    Requires that elements in list can be compared
-    using the < operator.
+    """
+    Insertion Sort
+    --------------
     Advantages:
         - simple implementation
         - efficient for small data sets
@@ -12,28 +12,29 @@ def insertion_sort(l):
     Disadvantages:
         - quadratic time complexity
     Time Complexity:
-        best: O(n)
-        average: O(n^2)
-        worst: O(n^2)
+        - worst:   O(n^2)
+        - average: O(n^2)
+        - best:    O(n)
     Space Complexity:
-        O(n)
+        - O(n)
     """
-
-    size = len(l)
+    temp = l[:]
+    size = len(temp)
     for i in range(1, size):
         for j in range(i, 0, -1):
             # iterate in reverse until element l[j] >= l[j-1]
-            if l[j] < l[j-1]:
+            if temp[j] < temp[j-1]:
                 # if elements are out of order, swap them
-                l[j-1], l[j] = l[j], l[j-1]
+                temp[j-1], temp[j] = temp[j], temp[j-1]
             else:
                 break
+    return temp
 
 if __name__ == '__main__':
     # test cases
     l = list(range(10, 0, -1))
     print('Unsorted list: ' + str(l));
-    insertion_sort(l)
+    l = insertion_sort(l)
     print('Sorted list: ' + str(l))
 
 
