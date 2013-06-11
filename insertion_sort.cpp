@@ -33,23 +33,25 @@ void print(vector<T> l) {
 }
 
 template<typename T>
-void insertion_sort(vector<T>& l) {
+vector<T> insertion_sort(vector<T>& l) {
     //pass by reference is crucial
-    int size = l.size();
+    vector<T> copy = l;
+    int size = copy.size();
     for (int i = 1; i < size; i++) {
         for (int j = i; j > 0; j--) {
             // iterate in reverse until element this[j] >= this[j-1]
-            if (l[j] < l[j-1]) {
+            if (copy[j] < copy[j-1]) {
                 // if elements are out of order,
                 // swap them using a temporary variable
-                T temp = l[j-1];
-                l[j-1] = l[j];
-                l[j] = temp;
+                T temp = copy[j-1];
+                copy[j-1] = copy[j];
+                copy[j] = temp;
             } else {
                 break;
             }
         }
     }
+    return copy;
 }
 
 
@@ -58,7 +60,7 @@ int main() {
     vector<int> l = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     cout << "Unsorted list: ";
     print(l);
-    insertion_sort(l);
+    l = insertion_sort(l);
     cout << "Sorted list: ";
     print(l);
     return 0;

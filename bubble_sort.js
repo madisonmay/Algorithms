@@ -1,4 +1,4 @@
-// 
+//
 // Bubble Sort
 // -----------
 // Advantages:
@@ -12,21 +12,22 @@
 //     - best:    O(n)
 // Space Complexity:
 //     - O(1)
-// 
+//
 
-Array.prototype.bubble_sort = function() {
+function bubble_sort(l) {
     // basic optimization to avoid unneeded checks
     // note that bubble_sort is the generic bad sorting algorithm
-    var size = this.length;
+    var copy = l;
+    var size = copy.length;
     var sorted_list = false;
     var j = 0;
     while (!sorted_list) {
         var modified = false;
         for (var i = 0; i < (size - j); i++) {
-            if (this[i-1] > this[i]) {
-                var temp = this[i-1];
-                this[i-1] = this[i];
-                this[i] = temp;
+            if (copy[i-1] > copy[i]) {
+                var temp = copy[i-1];
+                copy[i-1] = copy[i];
+                copy[i] = temp;
                 modified = true;
             }
         }
@@ -35,10 +36,11 @@ Array.prototype.bubble_sort = function() {
             j += 1;
         }
     }
+    return copy;
 }
 
 // Test cases
 var l = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 console.log('Unsorted list: ', l);
-l.bubble_sort();
+l = bubble_sort(l);
 console.log('Sorted list: ', l);

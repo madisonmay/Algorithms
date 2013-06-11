@@ -18,26 +18,28 @@ Space Complexity:
     - O(n)
 */
 
-Array.prototype.insertion_sort = function() {
-    size = this.length;
+function insertion_sort(l) {
+    var copy = l;
+    var size = copy.length;
     for (var i = 1; i < size; i++) {
         for (var j = i; j > 0; j--) {
-            // iterate in reverse until element this[j] >= this[j-1]
-            if (this[j] < this[j-1]) {
+            // iterate in reverse until element copy[j] >= copy[j-1]
+            if (copy[j] < copy[j-1]) {
                 // if elements are out of order,
                 // swap them using a temporary variable
-                var temp = this[j-1];
-                this[j-1] = this[j];
-                this[j] = temp;
+                var temp = copy[j-1];
+                copy[j-1] = copy[j];
+                copy[j] = temp;
             } else {
                 break
             }
         }
     }
+    return copy;
 }
 
 // Testing
-var l = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+var l = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 console.log("Unsorted list: ", l);
-l.insertion_sort();
+l = insertion_sort(l);
 console.log("Sorted list: ", l);
