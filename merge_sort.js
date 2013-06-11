@@ -18,7 +18,7 @@ function merge(left, right) {
     return result;
 }
 
-Array.prototype.merge_sort = function() {
+function merge_sort(l) {
     /*
     Merge Sort
     ----------
@@ -34,12 +34,12 @@ Array.prototype.merge_sort = function() {
     Space complexity:
         - O(n)
     */
-    if (this.length <= 1) {
-        return this;
+    if (l.length <= 1) {
+        return l;
     } else {
-        var pivot = this.length/2;
-        var left = this.slice(0, pivot).merge_sort();
-        var right = this.slice(pivot).merge_sort();
+        var pivot = l.length/2;
+        var left = l.slice(0, pivot).merge_sort();
+        var right = l.slice(pivot).merge_sort();
         return merge(left, right);
     }
 }
@@ -48,6 +48,6 @@ Array.prototype.merge_sort = function() {
 //test cases
 l = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 console.log('Unsorted list: ', l);
-l = l.merge_sort();
+l = merge_sort(l);
 console.log('Sorted list: ', l);
 
