@@ -1,5 +1,5 @@
 def merge(left, right):
-    result = [];
+    result = []
     while len(left) > 0 or len(right) > 0:
         if len(left) > 0 and len(right) > 0:
             if left[0] < right[0]:
