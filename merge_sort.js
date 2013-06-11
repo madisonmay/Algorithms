@@ -38,8 +38,8 @@ function merge_sort(l) {
         return l;
     } else {
         var pivot = l.length/2;
-        var left = l.slice(0, pivot).merge_sort();
-        var right = l.slice(pivot).merge_sort();
+        var left = merge_sort(l.slice(0, pivot));
+        var right = merge_sort(l.slice(pivot));
         return merge(left, right);
     }
 }
