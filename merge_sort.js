@@ -1,3 +1,19 @@
+/*
+Merge Sort
+----------
+Advantages:
+    - Relatively fast for large data sets
+    - Stable
+Disadvantages:
+    - Not in-place
+Time complexity:
+    - worst:   O(n*log(n))
+    - average: O(n*log(n))
+    - best:    O(n*log(n))
+Space complexity:
+    - O(n)
+*/
+
 function merge(left, right) {
     var result = [];
     while (left.length > 0 || right.length > 0) {
@@ -19,21 +35,6 @@ function merge(left, right) {
 }
 
 function merge_sort(l) {
-    /*
-    Merge Sort
-    ----------
-    Advantages:
-        - Relatively fast for large data sets
-        - Stable
-    Disadvantages:
-        - Not in-place
-    Time complexity:
-        - worst:   O(n*log(n))
-        - average: O(n*log(n))
-        - best:    O(n*log(n))
-    Space complexity:
-        - O(n)
-    */
     if (l.length <= 1) {
         return l;
     } else {

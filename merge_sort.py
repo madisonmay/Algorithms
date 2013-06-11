@@ -1,3 +1,5 @@
+
+
 def merge(left, right):
     result = []
     while len(left) > 0 or len(right) > 0:
