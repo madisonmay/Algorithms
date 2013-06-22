@@ -1,6 +1,6 @@
 function quicksort(array) {
     if (array.length <= 1) {
-        return array
+        return array;
     }
     var pivot_index = Math.floor((Math.random()*array.length));
     var pivot = array[pivot_index];
