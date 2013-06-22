@@ -1,3 +1,19 @@
+/*
+Quicksort (partition-exchange sort)
+----------
+Advantages:
+    - Fast for large data sets
+Disadvantages:
+    - Not stable
+Time complexity:
+    - worst:   O(n^2)
+    - average: O(n*log(n))
+    - best:    O(n*log(n))
+Space complexity:
+    - Ideally O(log n)
+    - This implementation O(n)
+*/
+
 #include <iostream>
 #include <vector>
 #include <stdlib.h>
