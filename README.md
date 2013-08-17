@@ -21,3 +21,5 @@ Current sorting algorithms:
   - [Python] (https://github.com/madisonmay/Algorithms/blob/master/quicksort.py)
   - [Javascript] (https://github.com/madisonmay/Algorithms/blob/master/quicksort.js)
   - [C++] (https://github.com/madisonmay/Algorithms/blob/master/quicksort.cpp)
+5. Selection Sort
+  - [Python] (https://github.com/madisonmay/Algorithms/blob/master/selection_sort.py)
